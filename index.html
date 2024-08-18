@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Forum</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <style>
+    .mulish {
+      font-family: "Mulish", sans-serif;
+    }
+    .inter {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+  <!-- daisyUI and Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="mulish">
+  <!-- Navbar section -->
+  <header class="container mx-auto my-4">
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a href="#">
+          <img src="images/logo.png" alt="">
+        </a>
+      </div>
+      <div class="flex-none">
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <div class="indicator tooltip" data-tip="home">
+              <img src="images/home.png" alt="">
+            </div>
+          </div>
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <div class="indicator tooltip" data-tip="edit">
+              <img src="images/edit.png" alt="">
+            </div>
+          </div>
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <div class="indicator tooltip" data-tip="join">
+              <img src="images/join.png" alt="">
+            </div>
+          </div>
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <div class="indicator tooltip" data-tip="flag">
+              <img src="images/flag.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-primary rounded-full">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Section -->
+    <div class="container mx-auto">
+      <div class="banner bg-[url('/images/bgbanner.png')] bg-cover bg-[#12132D] h-[70vh] rounded-3xl" >
+        <div class="flex justify-between items-center p-16">
+          <div>
+            <h1 class="text-6xl text-white font-black">Welcome to the <br> <span class="bg-gradient-to-r from-[#797DFC] via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">ReTro</span> Forum</h1>
+            <p class="text-white my-5 text-xl">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+            <form id="">
+              <label class="input flex items-center rounded-full w-[300px]">
+                <input id="" type="text" placeholder="Search here anything"/>
+                <button type="submit" id="" class="btn bg-[#797DFC] text-white rounded-full px-6">Search</button>
+              </label>
+            </form>
+          </div>
+          <div class="text-black">
+            <div class="bg-white p-8 rounded-3xl">
+              <table>
+                <tr>
+                  <td>Registered Users</td>
+                  <td class="pl-10">01</td>
+                </tr>
+                <tr>
+                  <td>Forum</td>
+                  <td class="pl-10">05</td>
+                </tr>
+                <tr>
+                  <td>Topics</td>
+                  <td class="pl-10">05</td>
+                </tr>
+                <tr>
+                  <td>Replies</td>
+                  <td class="pl-10">05</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Discus section -->
+     
+  </main>
+  <footer>
+    
+  </footer>
+</body>
+</html>
