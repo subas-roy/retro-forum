@@ -18,12 +18,14 @@ loadPosts2()
 
 const displayPosts = (posts) => {
   const postContainer = document.getElementById('post-container');
+  postContainer.textContent = '';
   posts.forEach(post => {
     // console.log(post)
     const postCard = document.createElement('div');
     postCard.classList = 'flex gap-6 bg-[#F3F3F5] rounded-2xl p-8';
     postCard.innerHTML = `
-      <div>
+      <div class="relative">
+        <div class="dot active absolute top-[-5px] right-[-5px] bg-[${post.isActive? '#10B981' : '#FF3434'}]"></div>
         <img class="rounded-lg" height="72px" width="72px" src="${post.image}" alt="">
       </div>
       <div class="meta flex flex-col gap-2 w-full">
@@ -111,4 +113,20 @@ const handleMarkAsRead = (e) => {
     </div>
   `;
   markAsReadContainer.appendChild(post);
+}
+
+// load posts
+const loadPost = async(categoryName) => {
+  const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`);
+  const data = await res.json();
+  const posts = data.posts;
+  console.log(posts)
+  displayPosts(posts)
+}
+
+// handle search button
+const handleSearch = () => {
+  const searchField = document.getElementById('search-field');
+  const searchText = searchField.value;
+  loadPost(searchText)
 }

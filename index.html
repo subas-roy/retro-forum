@@ -15,6 +15,13 @@
     .inter {
       font-family: "Inter", sans-serif;
     }
+    .dot {
+            height: 15px;
+            width: 15px;
+            background-color: grey;
+            border-radius: 50%;
+            display: inline-block;
+    }
   </style>
   <!-- daisyUI and Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -62,17 +69,15 @@
   <main>
     <!-- Banner Section -->
     <div class="container mx-auto">
-      <div class="banner bg-[url('/images/bgbanner.png')] bg-cover bg-[#12132D] h-[70vh] rounded-3xl" >
+      <div class="banner bg-[url('/images/bgbanner.png')] bg-cover bg-[#12132D] rounded-3xl" >
         <div class="flex justify-between items-center p-16">
           <div>
             <h1 class="text-6xl text-white font-black">Welcome to the <br> <span class="bg-gradient-to-r from-[#767AF7] via-[#5154AC] to-[#343672] inline-block text-transparent bg-clip-text">ReTro</span> Forum</h1>
             <p class="text-white my-5 text-xl">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
-            <form id="">
               <label class="input flex items-center rounded-full w-[300px]">
-                <input id="" type="text" placeholder="Search here anything"/>
-                <button type="submit" id="" class="btn bg-[#797DFC] text-white rounded-full px-6">Search</button>
+                <input id="search-field" type="text" placeholder="Search category"/>
+                <button onclick="handleSearch()" class="btn bg-[#797DFC] text-white rounded-full px-6">Search</button>
               </label>
-            </form>
           </div>
           <div class="text-black">
             <div class="bg-white p-8 rounded-3xl">
