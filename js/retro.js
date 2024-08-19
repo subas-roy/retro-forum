@@ -46,7 +46,7 @@ const displayPosts = (posts) => {
               <span>${post.posted_time} min</span>
             </div>
           </div>
-          <img src="images/email.png" alt="">
+          <img class="read" onclick="handleMarkAsRead(event)" src="images/email.png" alt="">
         </div>
       </div>
     `;
@@ -58,7 +58,6 @@ const displayPosts = (posts) => {
 const displayPosts2 = (posts) => {
   const postContainer = document.getElementById('latest-post-container');
   posts.forEach(post => {
-    console.log(post)
     const postCard = document.createElement('div');
     postCard.classList = 'card bg-base-100 w-96 shadow-xl';
     postCard.innerHTML = `
@@ -74,7 +73,6 @@ const displayPosts2 = (posts) => {
           </div>
           <p class="inter font-medium text-sm">${post.author?.posted_date? post.author.posted_date : 'No publish date'}</p>
         </div>
-        
         <h2 class="card-title mulish font-extrabold text-lg">${post.title}</h2>
         <p>${post.description}</p>
         <div class="flex gap-3">
@@ -91,4 +89,26 @@ const displayPosts2 = (posts) => {
     // append child
     postContainer.appendChild(postCard)
   });
+}
+
+let readCount = 0;
+const handleMarkAsRead = (e) => {
+  readCount++;
+  const readCounter = document.getElementById('read-count');
+  readCounter.innerText = readCount;
+  const markAsReadContainer = document.getElementById('mark-as-read-container');
+  const post = document.createElement('div');
+  post.classList = 'flex bg-white p-4 rounded-2xl my-4 gap-4';
+  post.innerHTML = `
+    <div>
+      <p class="mulish font-semibold">10 Kids Unaware of Their Halloween Costume</p>
+    </div>
+    <div class="flex gap-2 items-center">
+      <div>
+        <img src="images/views.png" alt="">
+      </div>
+      <span>500</span>
+    </div>
+  `;
+  markAsReadContainer.appendChild(post);
 }
