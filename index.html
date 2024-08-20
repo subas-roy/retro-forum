@@ -70,17 +70,17 @@
     <!-- Banner Section -->
     <div class="container mx-auto">
       <div class="banner bg-[url('/images/bgbanner.png')] bg-cover bg-[#12132D] rounded-3xl" >
-        <div class="flex justify-between items-center p-16">
+        <div class="flex justify-between items-center p-8 lg:p-16">
           <div>
-            <h1 class="text-6xl text-white font-black">Welcome to the <br> <span class="bg-gradient-to-r from-[#767AF7] via-[#5154AC] to-[#343672] inline-block text-transparent bg-clip-text">ReTro</span> Forum</h1>
-            <p class="text-white my-5 text-xl">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
-              <label class="input flex items-center rounded-full w-[300px]">
-                <input id="search-field" type="text" placeholder="Search category"/>
+            <h1 class="text-4xl lg:text-6xl text-white font-black">Welcome to the <br> <span class="bg-gradient-to-r from-[#767AF7] via-[#5154AC] to-[#343672] inline-block text-transparent bg-clip-text">ReTro</span> Forum</h1>
+            <p class="text-white my-5 lg:text-xl">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+              <label class="input flex items-center rounded-full lg:w-[300px]">
+                <input id="search-field" type="text" placeholder="Search category" class="w-[100%]"/>
                 <button onclick="handleSearch()" class="btn bg-[#797DFC] text-white rounded-full px-6">Search</button>
               </label>
           </div>
-          <div class="text-black">
-            <div class="bg-white p-8 rounded-3xl">
+          <div class="text-black hidden lg:block">
+            <div class="bg-white p-2 lg:p-8 rounded-3xl">
               <table>
                 <tr>
                   <td>Registered Users</td>
@@ -109,9 +109,9 @@
     <section class="container mx-auto py-24">
       <div class="text-center">
         <h2 class="text-5xl font-black">Let’s Discuss</h2>
-        <p class="inter font-normal text-lg py-8">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        <p class="inter font-normal text-lg py-8 lg:w-[60%] mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
       </div>
-      <div class="flex gap-6">
+      <div class="lg:flex grid gap-6">
         <div id="post-container" class="flex flex-col gap-6">
         </div>
         <div>
@@ -135,10 +135,10 @@
     <!-- Join Section -->
     <section class="container mx-auto">
       <div class="bg-[#12132D] rounded-3xl">
-        <div class="flex justify-between items-center py-8 px-16">
+        <div class="flex justify-between items-center py-8 px-8 lg:px-16">
           <div>
-            <h1 class="text-5xl text-white font-black">Join Our Forum</h1>
-            <p class="text-white font-medium my-5 text-lg">Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and view the results directly within the app. </p>
+            <h1 class="text-4xl lg:text-5xl text-white font-black">Join Our Forum</h1>
+            <p class="text-white font-medium my-5 lg:text-lg lg:w-[75%]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
             <div>4
               <button class="btn rounded-full px-8 text-white bg-[#797DFC]">Registerer Now</button>
             </div>
@@ -156,10 +156,10 @@
     <section class="container mx-auto py-24">
       <div class="text-center">
         <h2 class="text-5xl font-black">Latest Posts</h2>
-        <p class="inter font-normal text-lg py-8">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        <p class="inter font-normal text-lg py-8 lg:w-[60%] mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
       </div>
       <div>
-        <div id="latest-post-container" class="flex gap-6 justify-around">
+        <div id="latest-post-container" class="grid justify-center md:flex gap-6">
         </div>
       </div>
     </section>
