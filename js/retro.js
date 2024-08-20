@@ -120,7 +120,7 @@ const loadPost = async(categoryName) => {
   const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`);
   const data = await res.json();
   const posts = data.posts;
-  console.log(posts)
+  // console.log(posts)
   displayPosts(posts)
 }
 
